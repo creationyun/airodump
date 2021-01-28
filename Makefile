@@ -2,7 +2,7 @@ LDLIBS=-lpcap
 
 all: airodump
 
-airodump: main.o
+airodump: main.o net-address.o
 	$(LINK.cc) $^ $(LDLIBS) -o $@
 
 clean:
