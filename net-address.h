@@ -13,7 +13,7 @@ class MacAddr {
 public:
 	uint8_t mac[6];
  
-	void print_mac_addr();
+	void print_mac_addr() const;
 	int set_mac_addr(const char *addr);
 	int set_mac_addr(MacAddr &addr);
 
@@ -31,7 +31,7 @@ class IPv4Addr {
 public:
 	uint32_t ip;
 
-	void print_ipv4_addr();
+	void print_ipv4_addr() const;
 	int set_ipv4_addr(const char *addr);
 	int set_ipv4_addr(IPv4Addr &addr);
 

@@ -5,7 +5,7 @@
 #include "net-address.h"
 
 /* print MAC address */
-void MacAddr::print_mac_addr() {
+void MacAddr::print_mac_addr() const {
 	for (int i = 0; i < 6; i++) {
 		printf("%02x", mac[i]);
 		if (i != 5) printf(":");
@@ -78,7 +78,7 @@ bool MacAddr::operator<(const MacAddr &addr) const {
 }
 
 /* print IP address */
-void IPv4Addr::print_ipv4_addr() {
+void IPv4Addr::print_ipv4_addr() const {
 	uint32_t addr = ntohl(ip);
 	printf("%d.%d.%d.%d",
 		(addr & 0xFF000000) >> 24,
